@@ -59,6 +59,7 @@ The pipeline only needs a function from prompt to text. Wrap any model you like:
 from ai_content_generator.models import ContentBrief, Tone
 from ai_content_generator.variations import generate_variations
 
+
 def my_llm(prompt: str) -> str:
     # e.g. call OpenAI, Anthropic, or a local server here and return the text.
     # from openai import OpenAI
@@ -69,6 +70,7 @@ def my_llm(prompt: str) -> str:
     # )
     # return resp.choices[0].message.content or ""
     return "Heading\n\nReal generated body text..."
+
 
 brief = ContentBrief(
     topic="our new analytics dashboard",
